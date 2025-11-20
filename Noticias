@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - MiPortal U</title>
+
+    
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+
+    
+    <style>
+        .news-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .news-title {
+            font-size: 2.2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary-text-color);
+        }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .news-card {
+            display: flex;
+            flex-direction: row;
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .news-image {
+            width: 170px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .news-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .news-heading {
+            font-size: 1.4rem;
+            color: var(--primary-text-color);
+            margin-bottom: 8px;
+        }
+
+        .news-description {
+            font-size: 1rem;
+            color: var(--secondary-text-color);
+            margin-bottom: 12px;
+        }
+
+        .news-link {
+            background: var(--blue);
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            text-decoration: none;
+            width: fit-content;
+            transition: background 0.2s ease;
+        }
+
+        .news-link:hover {
+            background: var(--blue-dark);
+        }
+
+        @media (max-width: 768px) {
+            .news-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .news-image {
+                width: 100%;
+                height: 200px;
+                margin: 0 0 15px 0;
+            }
+
+            .news-link {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-text">MiPortal</span>
+                <span class="logo-u">U</span>
+                <div class="logo-dots">
+                    <span class="dot dot-blue"></span>
+                    <span class="dot dot-green"></span>
+                    <span class="dot dot-orange"></span>
+                    <span class="dot dot-red"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    <main class="main-content">
+        <div class="news-container">
+            <h1 class="news-title">Noticias</h1>
+
+            <div class="news-list">
+                <article class="news-card">
+                    <img src="assets/img/noticia1.jpg" alt="Noticia 1" class="news-image">
+                    <div class="news-info">
+                        <h2 class="news-heading">Título de la Noticia 1</h2>
+                        <p class="news-description">Descripción breve de la noticia para llamar la atención del usuario.</p>
+                        <a href="noticia1.html" class="news-link">Leer más</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="assets/img/noticia2.jpg" alt="Noticia 2" class="news-image">
+                    <div class="news-info">
+                        <h2 class="news-heading">Título de la Noticia 2</h2>
+                        <p class="news-description">Resumen corto de la segunda noticia del portal institucional.</p>
+                        <a href="noticia2.html" class="news-link">Leer más</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="assets/img/noticia3.jpg" alt="Noticia 3" class="news-image">
+                    <div class="news-info">
+                        <h2 class="news-heading">Título de la Noticia 3</h2>
+                        <p class="news-description">Descripción corta de la tercera noticia mostrada en la sección.</p>
+                        <a href="noticia3.html" class="news-link">Leer más</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="footer-text">
+                <p>Universidad Autónoma de Bucaramanga</p>
+                <p class="footer-copyright">© Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
